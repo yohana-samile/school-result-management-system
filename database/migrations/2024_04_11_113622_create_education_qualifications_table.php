@@ -13,7 +13,7 @@
         {
             Schema::create('education_qualifications', function (Blueprint $table) {
                 $table->id();
-                $table->name('name');
+                $table->string('name');
                 $table->timestamps();
             });
         }

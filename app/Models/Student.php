@@ -14,6 +14,11 @@
         // Language Proficiency: Information about the languages the student speaks and their proficiency level.
         // Extracurricular Activities: Clubs, sports teams, or other activities the student participates in outside of regular classes.
         // Behavioral Information: Any relevant behavioral observations or disciplinary actions.
-
+        public function user(){
+            return $this->belongsTo(User::class);
+        }
+        public function guard_information(){
+            return $this->hasOne(Guard_information::class);
+        }
     }
 

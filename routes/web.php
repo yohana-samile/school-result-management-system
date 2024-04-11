@@ -31,4 +31,5 @@
     // subject
     Route::controller(SubjectController::class)->group(function () {
         Route::get('subject/index', 'index')->name('subject/index');
+        Route::post('subject/registerSubject', 'registerSubject')->name('subject/registerSubject');
     })->middleware('auth');

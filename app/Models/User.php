@@ -42,7 +42,9 @@
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
-
+        public function role(){
+            return $this->belongsToMany(Role::class);
+        }
         public function teacher(){
             return $this->hasOne(Teacher::class);
         }

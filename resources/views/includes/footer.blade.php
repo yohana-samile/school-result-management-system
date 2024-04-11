@@ -55,7 +55,7 @@
 
         <!-- Custom scripts for all pages-->
         <script src="{{ url("js/style.min.js")}}"></script>
-        <script src="{{ url("js/custome.js")}}"></script>
+        <script src="{{ url("js/custom.js")}}"></script>
 
         <!-- Page level plugins -->
         <script src="{{ url("vendor/datatables/jquery.dataTables.min.js")}}"></script>

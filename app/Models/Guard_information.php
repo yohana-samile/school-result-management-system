@@ -6,5 +6,8 @@
     class Guard_information extends Model {
         protected $fillable = ['name', 'phone_number', 'address', 'user'];
         use HasFactory;
+        public function student(){
+            return $this->belongsTo(Student::class);
+        }
     }
 
