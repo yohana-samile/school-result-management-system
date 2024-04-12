@@ -1,8 +1,8 @@
 <?php
-
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\User\UserController;
     use App\Http\Controllers\Subject\SubjectController;
+    use App\Http\Controllers\Utilities\UtilitieController;
 
     /*
     |--------------------------------------------------------------------------
@@ -34,4 +34,12 @@
     Route::controller(SubjectController::class)->group(function () {
         Route::get('subject/index', 'index')->name('subject/index');
         Route::post('subject/registerSubject', 'registerSubject')->name('subject/registerSubject');
+    })->middleware('auth');
+
+    // utilities
+    Route::controller(UtilitieController::class)->group(function () {
+        Route::get('utilities/grade', 'grade')->name('utilities/grade');
+        Route::get('utilities/form', 'form')->name('utilities/form');
+        Route::get('utilities/semester', 'semester')->name('utilities/semester');
+        Route::post('utilities/registerGrade', 'registerGrade')->name('subject/registerGrade');
     })->middleware('auth');

@@ -4,16 +4,17 @@
     use Illuminate\Database\Seeder;
     use DB;
 
-    class RoleSeeder extends Seeder
+    class FormSeeder extends Seeder
     {
         /**
          * Run the database seeds.
          */
         public function run(): void {
-            DB::table('roles')->insert([
-                ['name' => 'is_admin'],
-                ['name' => 'is_staff'],
-                ['name' => 'is_student'],
+            DB::table('forms')->insert([
+                ['name' => 'form one'],
+                ['name' => 'form two'],
+                ['name' => 'form three'],
+                ['name' => 'form four']
             ]);
         }
     }
