@@ -4,7 +4,7 @@
     use Illuminate\Database\Eloquent\Model;
 
     class Guard_information extends Model {
-        protected $fillable = ['name', 'phone_number', 'address', 'user'];
+        protected $fillable = ['name', 'phone_number', 'address'];
         use HasFactory;
         public function student(){
             return $this->belongsTo(Student::class);

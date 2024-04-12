@@ -5,7 +5,7 @@
 
     class Student extends Model {
         use HasFactory;
-        protected $fillable = ['enrolment_number', 'gender', 'dob', 'address', 'guard_information', 'medical_information'];
+        protected $fillable = ['enrolment_number', 'gender', 'dob', 'address'];
         // BELOW FACTOR IS OUT OF OUR SCOPE NOT WORRY MABELEEE
 
         // Academic Record: Previous schools attended, grades, and academic achievements. This factor is out of scope not worry mabele

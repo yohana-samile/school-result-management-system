@@ -10,13 +10,7 @@
         // other foctor like personal skills is constant never worry mabele
 
         public function User(){
-            return $this->belongs(User::class);
-        }
-        public function Education_qualification(){
-            return $this->belongsToMany(Education_qualification::class);
-        }
-        public function subject(){
-            return $this->belongsToMany(Subject::class);
+            return $this->belongsTo(User::class);
         }
     }
 

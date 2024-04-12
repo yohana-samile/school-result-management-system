@@ -26,6 +26,8 @@
     Route::controller(UserController::class)->group(function () {
         Route::get('student', 'student')->name('student');
         Route::get('staff', 'staff')->name('staff');
+        Route::post('staff/registerTeacher', 'registerTeacher')->name('staff/registerTeacher');
+        Route::post('staff/registerStudent', 'registerStudent')->name('staff/registerStudent');
     })->middleware('auth');
 
     // subject

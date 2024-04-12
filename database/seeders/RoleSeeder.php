@@ -12,7 +12,9 @@
          */
         public function run(): void {
             DB::table('roles')->insert([
-                'name' => 'is_admin'
+                ['name' => 'is_admin'],
+                ['name' => 'is_staff'],
+                ['name' => 'is_student'],
             ]);
         }
     }

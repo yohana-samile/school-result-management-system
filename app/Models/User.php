@@ -42,11 +42,17 @@
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
-        public function role(){
-            return $this->belongsToMany(Role::class);
+        public function roles(){
+            return $this->belongsToMany(Role::class, 'user_role');
         }
         public function teacher(){
             return $this->hasOne(Teacher::class);
+        }
+        public function subjects() {
+            return $this->belongsToMany(Subject::class);
+        }
+        public function education_qualifications(){
+            return $this->belongsToMany(Education_qualification::class);
         }
         public function student(){
             return $this->hasOne(Student::class);

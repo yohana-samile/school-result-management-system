@@ -1,5 +1,4 @@
 <?php
-
     use Illuminate\Database\Migrations\Migration;
     use Illuminate\Database\Schema\Blueprint;
     use Illuminate\Support\Facades\Schema;
@@ -11,11 +10,10 @@
          */
         public function up(): void
         {
-            Schema::create('teacher_education_qualification', function (Blueprint $table) {
+            Schema::create('education_qualification_user', function (Blueprint $table) {
                 $table->id();
-                $table->foreignIdFor(\App\Models\Teacher::class);
+                $table->foreignIdFor(\App\Models\User::class);
                 $table->foreignIdFor(\App\Models\Education_qualification::class);
-
                 $table->timestamps();
             });
         }
@@ -25,6 +23,7 @@
          */
         public function down(): void
         {
-            Schema::dropIfExists('teacher_education_qualification');
+            Schema::dropIfExists('education_qualification_user');
         }
     };
+
