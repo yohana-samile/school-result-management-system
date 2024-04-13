@@ -9,11 +9,12 @@
                         <h6 class="m-0 font-weight-bold text-primary">Grades</h6>
                     </div>
                     <div class="col-md-6">
-                        <a href="" class="btn btn-primary btn-sm float-right" data-bs-toggle="modal" data-bs-target="#new_form">New Form<i class="fa fa-plus"></i></a>
+                        <a href="" class="btn btn-primary btn-sm float-right" data-bs-toggle="modal" data-bs-target="#new_gradeLabel">New Grade<i class="fa fa-plus"></i></a>
                     </div>
                 </div>
             </div>
             <div class="card-body">
+                <div class="alert alert-success" style="display: none;"></div>
                 <div class="alert alert-success" style="display: none;"></div>
                 <div class="table-responsive">
                     <table class="table" id="dataTable" width="100%" cellspacing="0">
@@ -21,8 +22,8 @@
                             <tr>
                                 <th>S/N</th>
                                 <th>Name</th>
-                                <th>Form Start</th>
-                                <th>Finish Time</th>
+                                <th>From Start</th>
+                                <th>To</th>
                                 <th>Time Registered</th>
                                 <th>Action</th>
                             </tr>
@@ -31,8 +32,8 @@
                             <tr>
                                 <th>S/N</th>
                                 <th>Name</th>
-                                <th>Form Start</th>
-                                <th>Finish Time</th>
+                                <th>From Start</th>
+                                <th>To</th>
                                 <th>Time Registered</th>
                                 <th>Action</th>
                             </tr>

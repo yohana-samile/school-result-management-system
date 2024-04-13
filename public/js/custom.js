@@ -74,6 +74,33 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 alert("something went wrong");
+                // console.error(xhr.responseText);
+            }
+        });
+    });
+
+    // grade
+    $('#register_grade').on('submit', function (e){
+        e.preventDefault();
+        var formData = new FormData(this);
+        var url = "registerGrade";
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                if (response.success) {
+                    $('.alert').html('New Grade added successfully');
+                    $('.alert').show();
+                    window.location.href = response.success;
+                    $('#register_grade')[0].reset();
+                }
+            },
+            error: function (xhr, status, error) {
+                alert("something went wrong");
                 console.error(xhr.responseText);
             }
         });
