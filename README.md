@@ -76,3 +76,5 @@ result-1
 Scope Of This Project Based On Student Final year project.
 
 Developed By Developer Samile (The Project is for Daniel Zanziber Mabele)
+
+For More Info Contact With Me via +255 (0) 620350083 or +255 (0) 745668527, email yohanasamile@gmail.com
