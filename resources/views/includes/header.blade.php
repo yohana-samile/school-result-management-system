@@ -11,5 +11,15 @@
         <link href="{{ url("css/srms.min.css")}}" rel="stylesheet">
         <link href="{{ url("vendor/datatables/dataTables.bootstrap4.min.css")}}" rel="stylesheet">
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        <style media="print">
+            body * {
+                display: none;
+            }
+
+            table {
+                display: block;
+            }
+        </style>
+
     </head>
     <body id="page-top">

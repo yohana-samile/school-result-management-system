@@ -8,4 +8,7 @@
             'name', 'from', 'to'
         ];
         use HasFactory;
+        public function result(){
+            return $this->hasMany(Result::class);
+        }
     }

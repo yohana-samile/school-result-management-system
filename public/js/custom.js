@@ -101,9 +101,48 @@ $(document).ready(function () {
             },
             error: function (xhr, status, error) {
                 alert("something went wrong");
+                // console.error(xhr.responseText);
+            }
+        });
+    });
+
+
+    // submit student result
+    $('#add_student_result').on('submit', function (e){
+        e.preventDefault();
+        var formData = new FormData($(this)[0]);
+        var currentUrl = window.location.href;
+        var parts = currentUrl.split('/');
+        var id = parts.pop();
+        var url = "/result/submitStudentResult/" + id;
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                if (response.success) {
+                    $('.alert').html('Result Submited successfully');
+                    $('.alert').show();
+                    window.location.href = response.success;
+                    $('#add_student_result')[0].reset();
+                }
+            },
+            error: function (xhr, status, error) {
+                alert("something went wrong");
                 console.error(xhr.responseText);
             }
         });
     });
+
 });
+function printTable() {
+    var printContents = document.getElementById('tableToPrint').outerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+}
+
 

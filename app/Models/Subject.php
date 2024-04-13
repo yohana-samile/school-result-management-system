@@ -9,5 +9,8 @@
         public function teacher(){
             return $this->belongsToMany(Teacher::class);
         }
+        public function result(){
+            return $this->hasMany(Result::class);
+        }
     }
 

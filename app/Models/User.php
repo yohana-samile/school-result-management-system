@@ -57,4 +57,7 @@
         public function student(){
             return $this->hasOne(Student::class);
         }
+        public function result(){
+            return $this->hasMany(Result::class);
+        }
     }

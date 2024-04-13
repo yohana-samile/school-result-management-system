@@ -3,6 +3,7 @@
     use App\Http\Controllers\User\UserController;
     use App\Http\Controllers\Subject\SubjectController;
     use App\Http\Controllers\Utilities\UtilitieController;
+    use App\Http\Controllers\Result\ResultController;
 
     /*
     |--------------------------------------------------------------------------
@@ -43,4 +44,12 @@
         Route::get('utilities/form', 'form')->name('utilities/form');
         Route::get('utilities/semester', 'semester')->name('utilities/semester');
         Route::post('utilities/registerGrade', 'registerGrade')->name('subject/registerGrade');
+    })->middleware('auth');
+
+    // Results
+    Route::controller(ResultController::class)->group(function () {
+        Route::get('result/index/{id}', 'index');
+        Route::post('result/submitStudentResult/{id}', 'submitStudentResult')->name('result/submitStudentResult/{id}');
+        Route::get('result/result_preview/{id}', 'result_preview')->name('result/result_preview/{id}');
+        Route::get('result/my_result', 'my_result')->name('result/my_result');
     })->middleware('auth');

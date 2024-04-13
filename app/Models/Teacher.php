@@ -10,7 +10,7 @@
         // other foctor like personal skills is constant never worry mabele
 
         public function User(){
-            return $this->belongsTo(User::class);
+            return $this->belongsToMany(User::class, 'subject_user', 'subject_id', 'user_id');
         }
     }
 
