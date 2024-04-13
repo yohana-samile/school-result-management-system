@@ -35,5 +35,10 @@
                 return response()->json(['success'=> '/utilities/grade']);
             }
         }
+
+        public function education_qualification(){
+            $education_qualifications = DB::select('select * from education_qualifications ');
+            return view('utilities/education_qualification', compact('education_qualifications'));
+        }
     }
 

@@ -39,6 +39,7 @@
     // utilities
     Route::controller(UtilitieController::class)->group(function () {
         Route::get('utilities/grade', 'grade')->name('utilities/grade');
+        Route::get('utilities/education_qualification', 'education_qualification')->name('utilities/education_qualification');
         Route::get('utilities/form', 'form')->name('utilities/form');
         Route::get('utilities/semester', 'semester')->name('utilities/semester');
         Route::post('utilities/registerGrade', 'registerGrade')->name('subject/registerGrade');

@@ -124,6 +124,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">{{__("Utilities:")}}</h6>
                         <a class="collapse-item" href="{{ url('utilities/grade') }}">{{__("Grade")}}</a>
+                        <a class="collapse-item" href="{{ url('utilities/education_qualification') }}">{{__("Education qualification")}}</a>
                         <a class="collapse-item" href="{{ url('utilities/form') }}">{{__("Form")}}</a>
                         <a class="collapse-item" href="{{ url('utilities/semester') }}">{{__("Semester")}}</a>
                     </div>
